@@ -1,17 +1,66 @@
-<!DOCTYPE html><html><head>
-  <script src="p5.js"></script>
-  <script src="p5.dom.min.js"></script>
-  <script src="../addons/p5.dom.js"></script>
-  <script src="../p5.min.js"></script>
-  <script src="p5.sound.min.js"></script>
-  <script src="ml5.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <meta charset="utf-8">
+<!DOCTYPE html>
 
-</head>
+<html>
+    <head>
+        <script src="p5.js"></script>
+        <script src="p5.dom.min.js"></script>
+        <script src="../addons/p5.dom.js"></script>
+        <script src="../p5.min.js"></script>
+        <script src="p5.sound.min.js"></script>
+        <script src="ml5.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="utf-8">
+        <title>t(9;22) Translocation Classifier</title>
+    </head>
 
-<body>
-  <script src="sketch.js"></script>
+    <body>
+        
+        <nav>
+            <ul class="topNav" id="dropDownClick">
+                <li><a href="https://en.wikipedia.org/wiki/Philadelphia_chromosome">About t(9;22) Translocation</a></li>
+                
+                <li><a href="https://en.wikipedia.org/wiki/Deep_learning">Abouut Deep Learning</a></li>
+                
+                <li class="topNavRight"><a href="#contact">Contact</a></li>
+                
+                <li class="dropDownIcon"><a href="javascript:void(0)" onclick="dropDownMenu()">&#9776;</a></li>
+                
+            </ul>
+        </nav>
+        
+        <script>
+            function dropDownMenu() {
+                var x = document.getElementById("dropDownClick");
+                if (x.className === "topNav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topNav";
+                }
+            }
+        </script>
+        
+        <div class="container" id="section_1_gradient">
+            <div class="row">
+                <div class="col-12">
+                    <div class="secOneWords">
+                        <h1 class="About">About this program:</h1>
+                        <h2 class="Description">This is a t(9;22) translocation(also known as Philadelphia Translocation) classifer trained using Google's Teachable Machine platform. </h2>
+                        <br>
+                        <h2 class="Tutorial">To use this program:</h2>
+                        <br>
+                        <ol class="Steps">
+                            <li>Crop out the images of chromosomes 9 and 22 from a regular karyotype image</li>
+                            <li>Create a new image of size 60*60 that contains chromsome 9 in the left half and chromosome 22 in the right half(examples of images can be found in the image folder)</li>
+                            <li>Drag the preprocessed image onto the canvas</li>
+                            <li>Click the "Classify Image" button</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <script src="sketch.js"></script>
+    </body>
 
-
-</body></html>
+</html>

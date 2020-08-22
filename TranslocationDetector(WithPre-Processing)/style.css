@@ -1,7 +1,170 @@
+/* ############# Default ########## */
 html, body {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
+
 canvas {
-  display: block;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 800px;
 }
+
+button {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+body {
+    line-height: 1;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.row::after {
+    display: table;
+    clear: both;
+    content: "";
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
+/* ########## Nav Bar ########### */
+nav {
+    width: 100%;
+    margin: 0;
+}
+
+nav ul {
+    background: #eee;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+ul.topNav li {
+    list-style: none;
+    float: left;
+}
+
+ul.topNav li.topNavRight {
+    float: right;
+}
+
+ul.topNav li a {
+    display: block;
+    text-decoration: none;
+    min-height: 16px;
+    text-align: center;
+    padding: 10px;
+    text-transform: uppercase;
+    color: cornflowerblue;
+    text-align: center;
+    text-shadow: 1px 1px 1px cornflowerblue;
+}
+
+ul.topNav li a:hover {
+    background-color:blue;
+    color:aliceblue;
+}
+
+ul.topNav li.dropDownIcon {
+    display: none;
+}
+
+/* ########### Section 1 View ######### */
+#section_1_gradient {
+    background: deepskyblue;
+    background: -webkit-linear-gradient(deepskyblue, #65a5ff);
+    background: -o-linear-gradient(deepskyblue, #65a5ff);
+    background: -moz-linear-gradient(deepskyblue, #65a5ff);
+    background: linear-gradient(deepskyblue, #65a5ff);
+}
+
+div.secOneWords {
+    margin-left: 2%;
+}
+
+h1.About {
+    color: #fff;
+    font-size: 30px;
+    margin: 0;
+    line-height: 80px;
+}
+
+h2.Description, h2.Tutorial, ol.Steps {
+    color: #fff;
+    font-size: 15px;
+    margin: 0;
+    line-height: 30px;
+}
+
+
+/* ########### Mobile View ############ */
+@media screen and (max-width: 680px) {
+    ul.topNav li {
+        display: none;
+    }
+    
+    ul.topNav li.dropDownIcon {
+        display: block;
+        float: right;
+    }
+    
+    ul.topNav.responsive li.dropDownIcon {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    
+    ul.topNav.responsive {
+        position: relative;
+    }
+    
+    ul.topNav.responsive li {
+        display: inline;
+        float: none;
+    }
+    
+    ul.topNav.responsive li a {
+        display: block;
+        text-align: left;
+    }
+}
+    
+    
+    
+    
+    
+    
