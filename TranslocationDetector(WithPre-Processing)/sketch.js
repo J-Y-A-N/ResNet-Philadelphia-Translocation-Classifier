@@ -28,8 +28,12 @@ function gotResult(error, results) {
   }
   // The results are in an array ordered by confidence.
   console.log(results);
-  createDiv("Label:" + results[0].label);
-  createDiv("Confidence: " + nf(results[0].confidence, 0, 2));
+  var resultField = document.getElementById('result');
+  var confidenceField = document.getElementById('confidence');
+  resultField.innerText = "Result: " + results[0].label;
+  confidenceField.innerText = "Confidence Level: " + nf(results[0].confidence, 0, 2)
+  //createDiv("Label:" + results[0].label);
+  //createDiv("Confidence: " + nf(results[0].confidence, 0, 2));
 }
 
 function draw() {
@@ -49,6 +53,6 @@ function gotFile(file) {
     // Draw the image onto the canvas
     image(img, 0, 0, width, height);
   } else {
-    console.log('Not an image file!');
+    alert('Not an image file/You have not put an image!');
   }
 }
